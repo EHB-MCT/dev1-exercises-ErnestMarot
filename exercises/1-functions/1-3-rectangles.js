@@ -1,38 +1,64 @@
 "use strict";
 
-//alert("Exercise 2");
+alert("Exercise 3");
 
 let canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-let context = canvas.getContext('2d')
+let context = canvas.getContext('2d');
 
 drawCrossedBox();
 
 function drawCrossedBox() {
 
-    context.beginPath();
-    context.lineWidth = 5;
+    //upper left rect
     context.strokeStyle = "red";
-    context.moveTo(50,50);
-    context.lineTo(200,200);
+    context.beginPath();
+    context.rect(50, 50, 150, 150);
+    context.fill;
     context.stroke();
 
-    context.beginPath();
-    context.lineWidth = 5;
+    //lower right rect
     context.strokeStyle = "red";
-    context.moveTo(200,50);
-    context.lineTo(50,200);
+    context.beginPath();
+    context.rect(200, 200, 150, 150);
+    context.fill;
     context.stroke();
 
+    //black middle rect
+    context.strokeStyle = "red";
+    context.fillStyle = "black";
     context.beginPath();
-    context.lineWidth = 5;
-    context.strokeStyle = "black";
-    context.moveTo(50,50);
-    context.lineTo(200,50);
-    context.lineTo(200,200);
-    context.lineTo(50,200);
-    context.lineTo(50,50);
-    context.lineTo(200,50);
+    context.rect(125, 125, 150, 150);
+    context.fill();
     context.stroke();
+
+    //lower left white rect
+    context.strokeStyle = "red";
+    context.fillStyle = "white";
+    context.beginPath();
+    context.rect(75, 275, 50, 50);
+    context.fill();
+    context.stroke();
+
+    //lower left black rect
+    context.fillStyle = "black";
+    context.beginPath();
+    context.rect(50, 325, 25, 25);
+    context.fill();
+
+    //upper right white rect
+    context.strokeStyle = "red";
+    context.fillStyle = "white";
+    context.beginPath();
+    context.rect(275, 75, 50, 50);
+    context.fill();
+    context.stroke();
+
+    //lower right black rect
+    context.fillStyle = "black";
+    context.beginPath();
+    context.rect(325, 50, 25, 25);
+    context.fill();
+
 }
