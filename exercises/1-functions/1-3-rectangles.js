@@ -1,6 +1,6 @@
 "use strict";
 
-alert("Exercise 2");
+//alert("Exercise 2");
 
 let canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
